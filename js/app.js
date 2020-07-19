@@ -1,3 +1,7 @@
+// Logic Reference: https://github.com/angle943/tic-tac-toe
+// have bugs when meet condition 2=5=8, 3=6=9, 4=5=6, 7=8=9
+// add if(one) etc. to check if it is empty ''
+
 // Variables
 
 msg = document.querySelector('#message h2')
@@ -8,8 +12,8 @@ let gameIsGoing = true
 
 // Functions
 
-// display winner or next
-function display(player){
+// display winner
+function display(player) {
     if (player === 'X'){
         msg.textContent = 'X Wins!!!'
         gameIsGoing = !gameIsGoing
@@ -21,10 +25,9 @@ function display(player){
 
     }
     // some boxs have '', which also meet the if statement, took time to figure out...
-    else{
-        msg.textContent = next + ' is next'
-        console.log(next);
-    }
+    // else {
+    //     msg.textContent = next + ' is next'
+    // }
 }
 
 // check winning cases
@@ -40,21 +43,20 @@ function gameStatus(){
     eight = document.querySelector('#eight').classList[1]
     nine = document.querySelector('#nine').classList[1]
 
-    if (one === two && one === three) {display(one)}
-    else if (four === five && four === six) {display(four)}
-    else if (seven === eight && seven === nine) {display(seven)}
-    else if (one === four && one === seven) {display(one)}
-    else if (two === five && two === eight) {display(two)}
-    else if (three === six && three === nine) {display(three)}
-    else if (one === five && one === nine) {display(one)}
-    else if (three === five && three === seven) {display(three)}
+    if (one && one === two && one === three) {display(one)}
+    else if (four && four === five && four === six) {display(four)}
+    else if (seven && seven === eight && seven === nine) {display(seven)}
+    else if (one && one === four && one === seven) {display(one)}
+    else if (two && two === five && two === eight) {display(two)}
+    else if (three && three === six && three === nine) {display(three)}
+    else if (one && one === five && one === nine) {display(one)}
+    else if (three && three === five && three === seven) {display(three)}
     else if (moves === 9){
         gameIsGoing = !gameIsGoing
         msg.textContent = 'Tie!!!'
     }
     else{
         msg.textContent = next + ' is next'
-        console.log(next);
     }
 }
 
