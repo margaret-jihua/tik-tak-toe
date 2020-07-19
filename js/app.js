@@ -1,3 +1,5 @@
+// Logic Reference: https://github.com/angle943/tic-tac-toe
+
 // Variables
 
 msg = document.querySelector('#message h2')
