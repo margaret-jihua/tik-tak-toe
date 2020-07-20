@@ -1,4 +1,4 @@
-# Tic Tac Toe
+# Tik Tak Toe
 
 ## List
 * Technologiess
