@@ -17,4 +17,4 @@
 * Have a reset button to start new game
 * Track player's wins over time
 
-<img src="../Tik_Tak_Toe.png" alt="preview"> 
+<img src="Tik_Tak_Toe.png" alt="preview">(https://margaret-jihua.github.io/tik-tak-toe/)
