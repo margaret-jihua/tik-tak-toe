@@ -32,10 +32,6 @@ function display(player) {
         oWins ++
         oScores.textContent = oWins
     }
-    // some boxs have '', which also meet the if statement, took time to figure out...
-    // else {
-    //     msg.textContent = next + ' is next'
-    // }
 }
 
 // check winning cases
@@ -72,50 +68,42 @@ function gameStatus(){
 
 
 // Excutions
-
-document.addEventListener('DOMContentLoaded', function(){
-
    
-    // click any box to display X or O and check game status 
-    // can use the following to seclect any element get clicked
-    // addEventListerner('click', function(e){e.target})
-    boxs = document.querySelectorAll('.box')
-    boxs.forEach(item => {
-        item.addEventListener('click', function(){
-            if (item.textContent !== '' || !gameIsGoing){
-                return
-            }
-            else if (moves %2 === 0){
-                item.textContent = 'X'
-                item.classList.add('X')
-                next = 'O'
-            }
-            else{
-                item.textContent = 'O'
-                item.setAttribute('class', 'box O')
-                next = 'X'
-            }
-            moves ++
-            gameStatus();                
-        })
+// click any box to display X or O and check game status 
+// can use the following to seclect any element get clicked
+// addEventListerner('click', function(e){e.target})
+boxs = document.querySelectorAll('.box')
+boxs.forEach(item => {
+    item.addEventListener('click', function(){
+        if (item.textContent !== '' || !gameIsGoing){
+            return
+        }
+        else if (moves %2 === 0){
+            item.textContent = 'X'
+            item.classList.add('X')
+            next = 'O'
+        }
+        else{
+            item.textContent = 'O'
+            item.setAttribute('class', 'box O')
+            next = 'X'
+        }
+        moves ++
+        gameStatus();                
     })
-
-
-    //reset button
-
-    document.getElementById("reset").onclick = function() {
-        msg.textContent = 'Let\'s Play'
-        moves = 0
-        next = ''
-        gameIsGoing = true
-        boxs.forEach(item => {
-            item.textContent = ''
-            item.setAttribute('class', 'box')
-        })
-    }
-
-
-
 })
 
+
+//reset button
+
+document.getElementById("reset").onclick = function() {
+    msg.textContent = 'Let\'s Play'
+    moves = 0
+    next = ''
+    gameIsGoing = true
+    boxs.forEach(item => {
+        item.textContent = ''
+        item.setAttribute('class', 'box')
+    })
+}
  
