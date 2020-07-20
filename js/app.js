@@ -5,10 +5,16 @@
 // Variables
 
 msg = document.querySelector('#message h2')
+xScores = document.getElementById('xScores')
+oScores = document.querySelector('#oScores')
+tieScores = document.querySelector('#tieScores')
+let xWins = 0
+let oWins = 0
+let tie = 0
 let moves = 0
 let next = ''
 let gameIsGoing = true
-
+console.log(xScores, oScores);
 
 // Functions
 
@@ -17,12 +23,14 @@ function display(player) {
     if (player === 'X'){
         msg.textContent = 'X Wins!!!'
         gameIsGoing = !gameIsGoing
-
+        xWins ++
+        xScores.textContent = xWins
     }
     else if (player === 'O') {
         msg.textContent = 'O Wins!!!'
         gameIsGoing = !gameIsGoing
-
+        oWins ++
+        oScores.textContent = oWins
     }
     // some boxs have '', which also meet the if statement, took time to figure out...
     // else {
@@ -54,6 +62,8 @@ function gameStatus(){
     else if (moves === 9){
         gameIsGoing = !gameIsGoing
         msg.textContent = 'Tie!!!'
+        tie ++
+        tieScores.textContent = tie
     }
     else{
         msg.textContent = next + ' is next'
@@ -67,7 +77,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
    
     // click any box to display X or O and check game status 
-
+    // can use the following to seclect any element get clicked
+    // addEventListerner('click', function(e){e.target})
     boxs = document.querySelectorAll('.box')
     boxs.forEach(item => {
         item.addEventListener('click', function(){
@@ -102,6 +113,8 @@ document.addEventListener('DOMContentLoaded', function(){
             item.setAttribute('class', 'box')
         })
     }
+
+
 
 })
 
