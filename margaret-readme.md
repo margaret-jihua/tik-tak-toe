@@ -1,5 +1,7 @@
 # Tik Tak Toe
 
+[Click to Play](https://margaret-jihua.github.io/tik-tak-toe/)
+
 ## List
 * Technologiess
 * How it works
@@ -17,4 +19,4 @@
 * Have a reset button to start new game
 * Track player's wins over time
 
-<img src="Tik_Tak_Toe.png" alt="preview">(https://margaret-jihua.github.io/tik-tak-toe/)
+<img src="Tik_Tak_Toe.png" alt="preview">
