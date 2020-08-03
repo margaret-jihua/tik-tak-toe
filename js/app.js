@@ -4,7 +4,7 @@
 
 // Variables
 
-msg = document.querySelector('#message h2')
+msg = document.querySelector('#message')
 xScores = document.getElementById('xScores')
 oScores = document.querySelector('#oScores')
 tieScores = document.querySelector('#tieScores')
@@ -14,20 +14,21 @@ let tie = 0
 let moves = 0
 let next = ''
 let gameIsGoing = true
-console.log(xScores, oScores);
+let bacon = 'images/bacon.png'
+let egg = 'images/egg.png'
 
 // Functions
 
 // display winner
 function display(player) {
     if (player === 'X'){
-        msg.textContent = 'X Wins!!!'
+        msg.textContent = 'Bacon Wins!!!'
         gameIsGoing = !gameIsGoing
         xWins ++
         xScores.textContent = xWins
     }
     else if (player === 'O') {
-        msg.textContent = 'O Wins!!!'
+        msg.textContent = 'Egg Wins!!!'
         gameIsGoing = !gameIsGoing
         oWins ++
         oScores.textContent = oWins
@@ -75,18 +76,23 @@ function gameStatus(){
 boxs = document.querySelectorAll('.box')
 boxs.forEach(item => {
     item.addEventListener('click', function(){
+
+        var img = document.createElement('img')
+
         if (item.textContent !== '' || !gameIsGoing){
             return
         }
         else if (moves %2 === 0){
-            item.textContent = 'X'
+            img.src = bacon
+            item.appendChild(img)
             item.classList.add('X')
-            next = 'O'
+            next = 'Egg'
         }
         else{
-            item.textContent = 'O'
+            img.src = egg
+            item.appendChild(img)
             item.setAttribute('class', 'box O')
-            next = 'X'
+            next = 'Bacon'
         }
         moves ++
         gameStatus();                

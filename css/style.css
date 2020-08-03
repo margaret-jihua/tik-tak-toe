@@ -1,65 +1,100 @@
 body{
   font-family: sans-serif;
   text-align: center;
-  background-color: lightgray;
+  background-color: rgb(202, 182, 143);
 }
 
 h1 {
-  color: purple;
+  font-family: fantasy;
+  color: rgb(187, 87, 29);
   font-size: 3.5rem;
 }
 
 h2{
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h3, p{
-  color: brown;
+  color: rgb(233, 187, 217);
   font-size: 2rem;
   margin: auto 5px;
 }
 
 #message{
-  left: 20%;
-  color: rgb(233, 127, 77);
+  float: left;
+  color: rgb(73, 168, 223);
 }
 
 #reset{
-  right: 20%;
-  color: rgb(174, 190, 30);
+  float: right;
+  color: rgb(162, 179, 17);
 }
 
 #reset:hover{
- color: rgb(128, 230, 107);
+ color: rgb(90, 224, 63);
 }
 
-.status{
-  display: inline;
-  position: absolute;
+.container {
+  background-image: url('../images/empty-plate.jpg');
+  height: 700px;
+  width: 1000px;
+  background-size: cover;
+  margin: auto;
 }
 
-.container{
-  border: lightslategray solid 5px;
+.bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.game-board {
+  background-image: url('../images/bread.png');
+  background-size: cover;
+  height: 400px;
+  width: 420px;
+  position: relative;
+  top: 8%;
+  left: 32%;
+}
+
+.game{
   display: inline-grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  top: 20%;
 }
 
 .box{
-  color: white;
-  background-color: black;
-  border: lightslategray solid 5px;
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   font-size: 6rem;
 }
 
 .box:hover{
-  background-color: rgb(54, 53, 53);
+  background-color: rgb(218, 175, 134, 0.5);
+}
+
+#one, #two, #three, #four, #five, #six {
+  border-bottom: chocolate solid 2px;
+}
+
+#one, #four, #seven, #two, #five, #eight {
+  border-right: chocolate solid 2px;
+}
+
+.score-bar {
+  position: relative;
+  top: 15%;
 }
 
 .scores{
   display: inline-flex;
   margin: 30px;
+}
+
+img {
+  height: 80px;
+  width: 80px;
 }
