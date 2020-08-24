@@ -23,4 +23,4 @@
 <img src="Tik_Tak_Toe.png" alt="preview">
 
 ## Updated layout
-<img src="Becan-Egg-Tik_Tak_Toe.png" alt="preview">
+<img src="Bacon-Egg-Tik_Tak_Toe.png" alt="preview">
