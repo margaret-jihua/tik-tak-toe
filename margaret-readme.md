@@ -19,4 +19,8 @@
 * Have a reset button to start new game
 * Track player's wins over time
 
+## Beginning layout
 <img src="Tik_Tak_Toe.png" alt="preview">
+
+## Updated layout
+<img src="Becan-Egg-Tik_Tak_Toe.png" alt="preview">
